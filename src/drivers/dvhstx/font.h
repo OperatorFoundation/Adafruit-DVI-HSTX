@@ -36,7 +36,18 @@ typedef struct {
     uint8_t line_height, base_line;
 } lv_font_t;
 
-#define FONT_HEIGHT 16
-extern const lv_font_t unifont_8x16;
+// Intel Mono - variable width, FONT_WIDTH is maximum character width
+#define FONT_HEIGHT 23
+#define FONT_WIDTH 14
+extern const lv_font_t intel_mono_2bpp;
+
+// Unifont - monospace, FONT_WIDTH is character width
+// #define FONT_HEIGHT 16
+// #define FONT_WIDTH 8
+
+#define TERMINAL_COLS_1280 (1280 / FONT_WIDTH)
+#define TERMINAL_ROWS_720  (720 / FONT_HEIGHT)
+#define TERMINAL_COLS_640  (640 / FONT_WIDTH)
+#define TERMINAL_ROWS_480  (480 / FONT_HEIGHT)
 
 #endif //SOFTWARE_FONT_H

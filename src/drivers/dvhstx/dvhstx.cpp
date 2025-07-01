@@ -509,10 +509,10 @@ bool DVHSTX::init(uint16_t width, uint16_t height, Mode mode_, bool double_buffe
     if (mode == MODE_TEXT_MONO || mode == MODE_TEXT_RGB111) {
         width = 1280;
         height = 720;
-        display_width = 91;
-        frame_width = 91;
-        display_height = 30;
-        frame_height = 30;
+        display_width = TERMINAL_COLS_1280;
+        frame_width = TERMINAL_COLS_1280;
+        display_height = TERMINAL_ROWS_720;
+        frame_height = TERMINAL_ROWS_720;
         h_repeat_shift = 0;
         v_repeat_shift = 0;
         timing_mode = &dvi_timing_1280x720p_rb_50hz;
@@ -632,7 +632,7 @@ bool DVHSTX::init(uint16_t width, uint16_t height, Mode mode_, bool double_buffe
         break;
     case MODE_TEXT_RGB111:
         frame_bytes_per_pixel = 2;
-        line_bytes_per_pixel = 14;
+        line_bytes_per_pixel = FONT_WIDTH;
         break;
     default:
         dvhstx_debug("Unsupported mode %d", (int)mode);
