@@ -36,7 +36,7 @@ typedef struct {
     uint8_t line_height, base_line;
 } lv_font_t;
 
-#define FONT_HEIGHT 23
-extern const lv_font_t intel_one_mono;
+#define FONT_HEIGHT 16
+extern const lv_font_t unifont_8x16;
 
 #endif //SOFTWARE_FONT_H
