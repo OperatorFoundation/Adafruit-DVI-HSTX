@@ -38,7 +38,7 @@ __attribute__((section(".uninitialized_data"))) static uint8_t frame_buffer_b[FR
 #include "font.h"
 
 // If changing the font, note this code will not handle glyphs wider than 13 pixels
-#define FONT (&unifont_8x16)
+#define FONT (&intel_mono_2bpp)
 
 #ifdef MICROPY_BUILD_TYPE
 extern "C" {
