@@ -515,7 +515,7 @@ bool DVHSTX::init(uint16_t width, uint16_t height, Mode mode_, bool double_buffe
         frame_height = TERMINAL_ROWS_720;
         h_repeat_shift = 0;
         v_repeat_shift = 0;
-        timing_mode = &dvi_timing_1280x720p_rb_50hz;
+        timing_mode = &dvi_timing_waveshare_720x1280_timing;
     }
     else if (width == 320 && height == 180) {
         h_repeat_shift = 2;
