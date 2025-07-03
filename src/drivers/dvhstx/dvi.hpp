@@ -60,3 +60,4 @@ extern const struct dvi_timing dvi_timing_1280x720p_rb_60hz;
 extern const struct dvi_timing dvi_timing_1920x1080p_rb2_30hz;
 extern const struct dvi_timing dvi_timing_1920x1080p_yolo_50hz;
 extern const struct dvi_timing dvi_timing_1920x1080p_yolo_60hz;
+extern const struct dvi_timing dvi_timing_waveshare_720x1280;
