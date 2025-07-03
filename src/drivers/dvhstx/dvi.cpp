@@ -2,24 +2,20 @@
 
 #include "dvi.hpp"
 
-const struct dvi_timing dvi_timing_waveshare_720x1280_timing = {
-	.h_active = 720,
-	.h_front_porch = 80,
-	.h_sync_width = 20,
-	.h_back_porch = 76,
-	.h_total = 896,
+const struct dvi_timing dvi_timing_waveshare_720x1280 = {
+    .h_sync_polarity   = false,  // Negative polarity
+    .h_front_porch     = 80,
+    .h_sync_width      = 20,
+    .h_back_porch      = 76,
+    .h_active_pixels   = 720,
 
-	.v_active = 1280,
-	.v_front_porch = 10,
-	.v_sync_width = 10,
-	.v_back_porch = 10,
-	.v_total = 1310,
+    .v_sync_polarity   = false,  // Negative polarity
+    .v_front_porch     = 10,
+    .v_sync_width      = 10,
+    .v_back_porch      = 10,
+    .v_active_lines    = 1280,
 
-	.pixel_clock_khz = 74250,  // 74.25 MHz
-
-	// Both syncs negative polarity
-	.h_sync_polarity = 0,
-	.v_sync_polarity = 0
+    .bit_clk_khz       = 742500  // 74.25 MHz * 10 for TMDS
 };
 
 // VGA -- we do this mode properly, with a pretty comfortable clk_sys (252 MHz)
